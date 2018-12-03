@@ -10,7 +10,7 @@ namespace PriceInformation.Repository
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL(ConfigurationManager.ConnectionStrings["PriceInformationConnectionString"].ConnectionString);
+            optionsBuilder.UseMySQL("server=SERVER;Port=PORT;database=DATABASE;user=USERNAME;password=PASSWORD");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
